@@ -5,7 +5,6 @@ COPY ./package.json ./
 COPY ./package-lock.json ./
 RUN npm ci --silent
 COPY ./ ./
-COPY ./nginx.conf /etc/nginx/
 RUN npm run build
 
 FROM nginx:stable-alpine
